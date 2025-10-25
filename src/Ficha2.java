@@ -85,7 +85,7 @@ public class Ficha2 {
     static double percentagemMenores(int[] arr, int valor) {
         int pos = pesquisaBinariaInsercao(arr, valor);
         int countMenores = (pos >= 0) ? pos : Math.abs(pos + 1);
-        return (double) countMenores / arr.length;
+        return (double) (countMenores / arr.length) * 100;
     }
 
     // -------------------- 6. Quantos valores dentro de intervalo --------------------
@@ -128,7 +128,7 @@ public class Ficha2 {
         // encontra ponto onde começam os negativos (primeiro < 0)
         int inicioNeg = 0;
         int inicio = 0, fim = arr.length - 1;
-        while (inicio <= fim) {
+        while (inicio <= fim || arr[fim] > 0) {
             int meio = (inicio + fim) / 2;
             if (arr[meio] < 0) {
                 inicioNeg = meio;

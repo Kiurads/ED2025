@@ -66,17 +66,13 @@ public class Ficha3 {
         return f1.compareTo(f2);
     }
 
-    public static <T> int compararRectangulo(Rectangulo r, T outro) {
-        if (outro instanceof Comparable<?>) {
-            Comparable<T> comp = (Comparable<T>) outro;
-            try {
-                return -comp.compareTo((T) r); // inverte sinal para manter coerência
-            } catch (ClassCastException e) {
-                System.out.println("Tipos incompatíveis!");
-                return 0;
-            }
+    public static int compararRectangulo(Rectangulo r, Figura outro) {
+        try {
+            return r.compareTo(outro);
+        } catch (ClassCastException e) {
+            System.out.println("Tipos incompatíveis!");
+            return 0;
         }
-        throw new IllegalArgumentException("O objeto não é comparável com Rectangulo.");
     }
 
     public static <T extends Comparable<? super T>> int comparar(T obj1, T obj2) {
