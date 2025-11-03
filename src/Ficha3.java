@@ -115,7 +115,7 @@ public class Ficha3 {
     public static void test() {
         System.out.println("\n=== 1. Por referência ===");
         String a = "ola";
-        String b = new String("ola");
+        String b = "ola";
         String c = a;
         String[] array1 = {a, b, c};
         System.out.println(apareceMaisDeUmaVezPorReferencia(array1, a)); // true
