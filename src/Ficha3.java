@@ -131,8 +131,8 @@ public class Ficha3 {
         System.out.println("Comparar rectângulo com outro: " + compararRectangulo(r1, r2));
 
         System.out.println("\n=== 4. Metodo Search ===");
-        Integer m[] = {3, 2, 6, 3};
-        String n[] = {"Ada", "Albino"};
+        Integer[] m = {3, 2, 6, 3};
+        String[] n = {"Ada", "Albino"};
         System.out.println(search(m, 2));         // true
         System.out.println(search(n, "Francisco"));// false
 
